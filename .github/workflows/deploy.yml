@@ -43,4 +43,4 @@ jobs:
           sudo docker pull sudheer007dfs/my-app:latest
           sudo docker stop my-app || true
           sudo docker rm my-app || true
-          docker run -e JWT_SECRET=${{secrets.JWT_SECRET}} -e DATABASE_URL=${{ secrets.DATABASE_URL}} -e NEXTAUTH_URL=${{secrets.NEXTAUTH_URL}} -p 3001:3001 sudheer007dfs/my-app:latest
+          docker run -d  -e JWT_SECRET=${{secrets.JWT_SECRET}} -e DATABASE_URL=${{ secrets.DATABASE_URL}} -e NEXTAUTH_URL=${{secrets.NEXTAUTH_URL}} -p 3001:3001 sudheer007dfs/my-app:latest
